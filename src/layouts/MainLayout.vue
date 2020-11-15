@@ -39,7 +39,7 @@
 
         <div class="absolute-top">
           <q-btn :to="'/'" flat class="full-width">
-            AFP
+            <q-icon size="lg" name="img:icons/logo.png" />
           </q-btn>
         </div>
 
@@ -102,19 +102,19 @@ export default {
           color: "black"
         },
         {
-          icon: "mdi-cog",
+          icon: "img:icons/skills.png",
           label: "Skills",
           to: "/skills",
           color: "black"
         },
         {
-          icon: "mdi-eye",
+          icon: "img:icons/projects.png",
           label: "Projects",
           to: "/projects",
           color: "black"
         },
         {
-          icon: "mdi-card-account-mail",
+          icon: "mdi-email-open",
           label: "Contacts",
           to: "/contacts",
           color: "black"
