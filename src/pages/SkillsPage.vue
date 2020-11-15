@@ -19,7 +19,9 @@
 
 <script>
 import VChart from "vue-echarts";
-import echarts from "echarts";
+import line from "echarts/lib/chart/line";
+import graphic from "echarts/lib/component/graphic";
+import bar from "echarts/lib/chart/bar";
 
 export default {
   name: "SkillsPage",
