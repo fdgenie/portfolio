@@ -1,5 +1,5 @@
 <template>
-  <div class="q-pa-md ">
+  <div class="q-pa-md bg-grey-10">
     <div class="column" style="height: 100vh">
       <div class="col-3" />
       <div class="col-4 row">
@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       graphConfig: {
-        color: ["#8EC9EB"],
+        color: ["#37e3ac"],
         grid: {
           left: 0,
           bottom: 0,
@@ -40,7 +40,13 @@ export default {
         },
         yAxis: {
           type: "category",
-          axisLine: { onZero: false, show: false },
+          axisLine: {
+            onZero: false,
+            show: false,
+            lineStyle: {
+              color: "#dadada"
+            }
+          },
           boundaryGap: false,
           data: [
             "Javascript",
