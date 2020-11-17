@@ -1,6 +1,6 @@
 <template>
-  <div class="q-pa-md bg-grey-10">
-    <div v-if="!$q.platform.is.mobile" class="column" style="height: 100vh">
+  <q-page class="q-pa-md bg-grey-10">
+    <div v-if="!$q.platform.is.mobile" class="column" style="height: calc(100vh - 50px);">
       <div class="col-3" />
       <div class="col-4 row">
         <span class="col-1" />
@@ -19,7 +19,7 @@
       </div>
       <div class="col" />
     </div>
-    <div v-else style="height: 100vh">
+    <div v-else style="height: calc(100vh - 50px);">
       <div class="col-6" />
       <div class="col row">
         <span class="col q-mt-xl">
@@ -36,7 +36,7 @@
       </div>
       <div class="col-2" />
     </div>
-  </div>
+  </q-page>
 </template>
 
 <script>
