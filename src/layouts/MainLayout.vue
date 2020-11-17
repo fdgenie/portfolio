@@ -1,6 +1,6 @@
 <template>
   <div id="q-app">
-    <q-layout view="lHr Lpr lff" class="shadow-2 rounded-borders">
+    <q-layout view="lHr lpr lfr" class="shadow-2 rounded-borders">
       <q-header v-if="!drawer" elevated class="bg-grey-3">
         <q-toolbar>
           <q-btn
@@ -70,6 +70,7 @@
                 :href="contact.url"
                 target="_blank"
                 style="text-decoration: none;"
+                class="flex flex-center"
               >
                 <q-item-section avatar>
                   <q-icon :color="contact.color" :name="contact.icon" />

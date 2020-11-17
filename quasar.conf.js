@@ -114,9 +114,9 @@ module.exports = function(/* ctx */) {
       workboxPluginMode: "GenerateSW", // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: `Quasar App`,
-        short_name: `Quasar App`,
-        description: `A Quasar Framework app`,
+        name: `Portfolio A.F.P`,
+        short_name: `Portfolio A.F.P`,
+        description: `Portfolio of Fero-Pantidis Aristeidis`,
         display: "standalone",
         orientation: "portrait",
         background_color: "#ffffff",

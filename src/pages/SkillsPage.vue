@@ -70,6 +70,9 @@ export default {
     return {
       graphConfig: {
         color: ["#37e3ac"],
+        legend: {
+          tooltip: false
+        },
         grid: {
           left: 0,
           bottom: 0,
@@ -116,7 +119,8 @@ export default {
             type: "bar",
             smooth: true,
             barCategoryGap: 20,
-            data: [4, 3.5, 3.5, 3, 3, 3.5, 4.5, 4.5, 4, 3.5, 4.5, 4.5]
+            data: [4, 3.5, 3.5, 3, 3, 3.5, 4.5, 4.5, 4, 3.5, 4.5, 4.5],
+            cursor: "auto"
           }
         ]
       },

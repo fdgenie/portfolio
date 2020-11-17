@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-md bg-grey-10">
-    <div v-if="!$q.platform.is.mobile" class="column" style="height: 100vh">
+    <div v-if="!$q.platform.is.mobile" class="column" style="height: 100vh" >
       <div class="col-3" />
       <div class="col-4 row">
         <span class="col-1" />
@@ -83,7 +83,7 @@
       <div class="col-1" />
       <div class="col-4 row">
         <span class="col">
-         <p class="text-h4 text-teal-13">
+          <p class="text-h4 text-teal-13">
             Get in touch!
           </p>
           <p class="text-h6 text-grey-4">

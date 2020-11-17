@@ -59,7 +59,7 @@
                 <q-card>
                   <q-card-section class="row bg-grey-4">
                     <div class="col text-grey-8 text-body1">
-                      Puzzle game in playStore and KaiOS.
+                      Puzzle game for every age. Currently available in playStore and KaiOS.
                     </div>
                     <div class="col-2 flex flex-center">
                       <a
