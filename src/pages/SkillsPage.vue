@@ -1,6 +1,10 @@
 <template>
   <q-page class="q-pa-md bg-grey-10">
-    <div v-if="!$q.platform.is.mobile" class="column" style="height: calc(100vh - 50px);">
+    <div
+      v-if="!$q.platform.is.mobile"
+      class="column"
+      style="height: calc(100vh - 50px);"
+    >
       <div class="col-3" />
       <div class="col-1 row">
         <span class="col-1" />
@@ -13,9 +17,7 @@
         <span class="col-1" />
         <span class="col-3">
           <p class="text-grey-4 text-h5">
-            Always eager to learn new technologies and expand my skillset.
-            Currently enjoying working with VueJS and Quasar, and dipping my
-            toes in GraphQL
+            {{ skillsText }}
           </p>
         </span>
         <span class="col-1" />
@@ -39,9 +41,7 @@
       <div class="col-1" />
       <div class="col-1">
         <p class="text-grey-4 text-body">
-          Always eager to learn new technologies and expand my skillset.
-          Currently enjoying working with VueJS and Quasar, and dipping my toes
-          in GraphQL
+          {{ skillsText }}
         </p>
       </div>
       <div class="col-4 row">
@@ -68,6 +68,9 @@ export default {
   },
   data() {
     return {
+      skillsText: ` Always eager to learn new technologies and expand my skillset.
+            Currently enjoying getting deeper in Vue3JS, and dipping my
+            toes in JAMstack. `,
       graphConfig: {
         color: ["#37e3ac"],
         legend: {
@@ -102,7 +105,7 @@ export default {
             "CSS",
             "Java",
             "Spring",
-            "NodeJs",
+            "Express",
             "MySQL",
             "Firebase",
             "Agile Methodologies"
@@ -119,7 +122,7 @@ export default {
             type: "bar",
             smooth: true,
             barCategoryGap: 20,
-            data: [4, 3.5, 3.5, 3, 3, 3.5, 4.5, 4.5, 4, 3.5, 4.5, 4.5],
+            data: [4, 3, 3, 2.5, 3, 3.5, 4.5, 4.5, 4.5, 3.5, 4.5, 4.5],
             cursor: "auto"
           }
         ]
@@ -129,7 +132,7 @@ export default {
         grid: {
           left: -15,
           bottom: 0,
-          right:  0,
+          right: 0,
           containLabel: true
         },
         boundaryGap: false,
@@ -168,7 +171,7 @@ export default {
         },
         series: [
           {
-            data: [4, 3.5, 3.5, 3, 3, 3.5, 4.5, 4.5, 4, 3.5, 4.5, 4.5],
+            data: [4, 3, 3, 2.5, 3, 3.5, 4.5, 4.5, 4.5, 3.5, 4.5, 4.5],
             type: "bar",
             showBackground: true
           }
