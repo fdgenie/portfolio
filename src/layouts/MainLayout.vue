@@ -9,7 +9,7 @@
             @click="drawer = !drawer"
             dense
             icon="menu"
-          ></q-btn>
+          />
         </q-toolbar>
       </q-header>
 
@@ -23,20 +23,6 @@
         :breakpoint="500"
         content-class="bg-grey-3"
       >
-        <div
-          class="q-mini-drawer-hide absolute"
-          style="top: 15px; right: -17px"
-        >
-          <q-btn
-            dense
-            round
-            unelevated
-            color="accent"
-            icon="chevron_left"
-            @click="miniState = true"
-          ></q-btn>
-        </div>
-
         <div class="absolute-top">
           <q-btn :to="'/'" flat class="full-width">
             <q-icon size="lg" name="img:icons/logo.png" />
@@ -52,12 +38,7 @@
               :to="index.to"
             >
               <q-item-section avatar>
-                <q-icon
-                  :color="index.color"
-                  :name="index.icon"
-                  @mouseenter="btnHover = true"
-                  @mouseleave="btnHover = false"
-                />
+                <q-icon :color="index.color" :name="index.icon" />
               </q-item-section>
             </q-item>
           </q-list>
@@ -65,17 +46,17 @@
 
         <div class="absolute-bottom">
           <q-list>
-            <q-item clickable v-for="(contact, key) in contacts" :key="key">
-              <a
-                :href="contact.url"
-                target="_blank"
-                style="text-decoration: none;"
-                class="flex flex-center"
-              >
-                <q-item-section avatar>
-                  <q-icon :color="contact.color" :name="contact.icon" />
-                </q-item-section>
-              </a>
+            <q-item
+              clickable
+              v-for="(contact, key) in contacts"
+              :key="key"
+              tag="a"
+              :href="contact.url"
+              target="_blank"
+            >
+              <q-item-section avatar>
+                <q-icon :color="contact.color" :name="contact.icon" />
+              </q-item-section>
             </q-item>
           </q-list>
         </div>
@@ -94,7 +75,6 @@ export default {
     return {
       drawer: false,
       miniState: true,
-      btnHover: false,
       indexes: [
         {
           icon: "mdi-home",
@@ -125,14 +105,12 @@ export default {
         {
           icon: "mdi-linkedin",
           label: "LinkedIn",
-          to: "/",
           color: "black",
           url: "https://www.linkedin.com/in/aristidis-fero-pantidis-211271156/"
         },
         {
           icon: "mdi-github",
           label: "Github",
-          to: "/about",
           color: "black",
           url: "https://github.com/fdgenie"
         }
@@ -141,3 +119,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.text-none {
+  text-decoration: none;
+}
+</style>
