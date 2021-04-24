@@ -1,59 +1,19 @@
 <template>
   <q-page class="q-pa-md bg-grey-10">
-    <div
-      v-if="!$q.platform.is.mobile"
-      class="column"
-      style="height: calc(100vh - 50px);"
-    >
-      <div class="col-3" />
-      <div class="col-1 row">
-        <span class="col-1" />
-        <p class="text-teal-13 text-h2">
-          SKILLS
-        </p>
-      </div>
-      <div class="col-1" />
-      <div class="col-4 row">
-        <span class="col-1" />
-        <span class="col-3">
-          <p class="text-grey-4 text-h5">
-            {{ skillsText }}
-          </p>
-        </span>
-        <span class="col-1" />
-        <span class="col">
-          <v-chart
-            style="width: 100%; min-height: 400px"
-            :option="graphConfig"
-          />
-        </span>
-        <span class="col-2" />
-      </div>
-      <div class="col" />
-    </div>
-    <div v-else class="column" style="height: calc(100vh - 50px);">
-      <div class="col-1" />
-      <div class="col-1 row">
-        <p class="text-teal-13 text-h2">
-          SKILLS
-        </p>
-      </div>
-      <div class="col-1" />
-      <div class="col-1">
-        <p class="text-grey-4 text-body">
-          {{ skillsText }}
-        </p>
-      </div>
-      <div class="col-4 row">
-        <span class="col">
-          <v-chart
-            style="width: 100%; min-height: 400px"
-            :option="graphConfigMobile"
-          />
-        </span>
-        <span class="" />
-      </div>
-      <div class="col" />
+    <div class="center-left-text">
+      <p class="text-teal-13 text-h2">
+        SKILLS
+      </p>
+
+      <p class="text-grey-4 text-h5">
+        Always eager to learn new technologies and expand my skillset. Currently
+        enjoying getting deeper in Vue3JS.
+      </p>
+
+      <v-chart
+        style="width: 100%; min-height: 400px"
+        :option="$q.platform.is.mobile ? graphConfigMobile : graphConfig"
+      />
     </div>
   </q-page>
 </template>
@@ -68,14 +28,8 @@ export default {
   },
   data() {
     return {
-      skillsText: ` Always eager to learn new technologies and expand my skillset.
-            Currently enjoying getting deeper in Vue3JS, and dipping my
-            toes in JAMstack. `,
       graphConfig: {
         color: ["#37e3ac"],
-        legend: {
-          tooltip: false
-        },
         grid: {
           left: 0,
           bottom: 0,
@@ -120,7 +74,6 @@ export default {
         series: [
           {
             type: "bar",
-            smooth: true,
             barCategoryGap: 20,
             data: [4, 3, 3, 2.5, 3, 3.5, 4.5, 4.5, 4.5, 3.5, 4.5, 4.5],
             cursor: "auto"
@@ -172,8 +125,7 @@ export default {
         series: [
           {
             data: [4, 3, 3, 2.5, 3, 3.5, 4.5, 4.5, 4.5, 3.5, 4.5, 4.5],
-            type: "bar",
-            showBackground: true
+            type: "bar"
           }
         ]
       }
@@ -181,3 +133,14 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+@media screen and (min-width: 996px) {
+  .center-left-text {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    left: 10%;
+  }
+}
+</style>
