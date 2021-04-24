@@ -36,7 +36,7 @@
 
 <script>
 import emailjs from "emailjs-com";
-import InputForm from "src/components/inputForm.vue";
+import InputForm from "src/components/InputForm";
 
 export default {
   name: "ContactsPage",

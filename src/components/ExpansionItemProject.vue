@@ -1,30 +1,30 @@
 <template>
-  <q-input
-    outlined
+  <q-expansion-item
+    expand-separator
+    :icon="icon"
     :label="label"
-    label-color="white"
-    color="white"
-    dark
-    :type="type"
+    class="text-teal-13 text-h5"
     :value="model"
     @input="$emit('update:model', $event)"
-  />
+  >
+    <slot />
+  </q-expansion-item>
 </template>
 
 <script>
 export default {
-  name: "InputForm",
+  name: "ExpansionItemProject",
   props: {
+    icon: {
+      type: String,
+      required: true
+    },
     label: {
       type: String,
       required: true
     },
-    type: {
-      type: String,
-      required: true
-    },
     model: {
-      type: String,
+      type: Boolean,
       required: true
     }
   }
