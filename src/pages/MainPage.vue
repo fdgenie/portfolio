@@ -5,8 +5,7 @@
         :class="$q.screen.gt.sm ? 'text-h2' : 'text-h4'"
         class="text-h2 text-teal-13"
       >
-        Hello, my name is Aristeidis <br />
-        and I am a full stack developer
+        Hello! My name is Aristeidis and I am a front end developer.
       </p>
       <p class="text-body1 text-grey-4 font-md">
         I love building user-friendly websites and web apps. I’ve been involved

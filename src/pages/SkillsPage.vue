@@ -5,15 +5,20 @@
         SKILLS
       </p>
 
-      <p class="text-grey-4 text-h5">
-        Always eager to learn new technologies and expand my skillset. Currently
-        enjoying getting deeper in Vue3JS.
-      </p>
-
-      <v-chart
-        style="width: 100%; min-height: 400px"
-        :option="$q.platform.is.mobile ? graphConfigMobile : graphConfig"
-      />
+      <div :class="$q.screen.gt.sm ? 'row' : false">
+        <div class="col-5">
+          <p class="text-grey-4 text-h5">
+            Always eager to learn new technologies and expand my skillset.
+            Currently enjoying getting deeper in Vue3JS.
+          </p>
+        </div>
+        <div class="offset-1 col">
+          <v-chart
+            style="width: 100%; min-height: 400px"
+            :option="$q.platform.is.mobile ? graphConfigMobile : graphConfig"
+          />
+        </div>
+      </div>
     </div>
   </q-page>
 </template>
@@ -138,7 +143,7 @@ export default {
 @media screen and (min-width: 996px) {
   .center-left-text {
     position: absolute;
-    top: 20%;
+    top: 30%;
     right: 10%;
     left: 10%;
   }

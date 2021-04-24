@@ -98,7 +98,7 @@ export default {
 @media screen and (min-width: 996px) {
   .center-left-text {
     position: absolute;
-    top: 25%;
+    top: 30%;
     right: 40%;
     left: 10%;
   }
