@@ -6,6 +6,7 @@
 // Configuration for your app
 // https://quasar.dev/quasar-cli/quasar-conf-js
 /* eslint-env node */
+const path = require("path");
 
 module.exports = function(/* ctx */) {
   return {
@@ -60,6 +61,12 @@ module.exports = function(/* ctx */) {
 
       // https://quasar.dev/quasar-cli/handling-webpack
       extendWebpack(cfg) {
+        // add @ import decorator
+        cfg.resolve.alias = {
+          ...cfg.resolve.alias,
+          "@": path.resolve(__dirname, "./src")
+        };
+
         cfg.module.rules.push({
           enforce: "pre",
           test: /\.(js|vue)$/,
@@ -95,9 +102,7 @@ module.exports = function(/* ctx */) {
       // directives: [],
 
       // Quasar plugins
-      plugins: [
-        'Notify'
-      ]
+      plugins: ["Notify"]
     },
 
     // animations: 'all', // --- includes all animations

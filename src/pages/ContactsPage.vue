@@ -36,7 +36,7 @@
 
 <script>
 import emailjs from "emailjs-com";
-import InputForm from "src/components/InputForm";
+import InputForm from "@/components/InputForm";
 
 export default {
   name: "ContactsPage",

@@ -57,8 +57,8 @@
 </template>
 
 <script>
-import ExpansionItemProject from "src/components/ExpansionItemProject";
-import ProjectCard from "src/components/ProjectCard";
+import ExpansionItemProject from "@/components/ExpansionItemProject";
+import ProjectCard from "@/components/ProjectCard";
 
 export default {
   name: "ProjectsPage",
