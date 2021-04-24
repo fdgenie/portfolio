@@ -36,8 +36,6 @@
               v-for="(index, key) in indexes"
               :key="key"
               :to="index.to"
-              @mouseenter="btnHover = true"
-              @mouseleave="btnHover = false"
             >
               <q-item-section avatar>
                 <q-icon :color="index.color" :name="index.icon" />
@@ -77,7 +75,6 @@ export default {
     return {
       drawer: false,
       miniState: true,
-      btnHover: false,
       indexes: [
         {
           icon: "mdi-home",
