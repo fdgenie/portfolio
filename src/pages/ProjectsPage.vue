@@ -83,7 +83,9 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+// $
+
 .q-field--outlined .q-field__control::before {
   border: 1px solid #ffffff;
 }
@@ -94,10 +96,7 @@ export default {
 
 @media screen and (min-width: 996px) {
   .center-left-text {
-    position: absolute;
-    top: 30%;
-    right: 10%;
-    left: 10%;
+    @include positionTexts(absolute, 30%, 10%, 10%);
   }
 }
 </style>

@@ -94,13 +94,13 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+// $
+
 @media screen and (min-width: 996px) {
   .center-left-text {
-    position: absolute;
-    top: 30%;
-    right: 40%;
-    left: 10%;
+    @include positionTexts(absolute, 30%, 40%, 10%);
+
   }
 }
 </style>

@@ -9,6 +9,7 @@
             @click="drawer = !drawer"
             dense
             icon="menu"
+            aria-label="burger-menu"
           />
         </q-toolbar>
       </q-header>
