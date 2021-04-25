@@ -53,6 +53,7 @@
               tag="a"
               :href="contact.url"
               target="_blank"
+              rel="noreferrer"
             >
               <q-item-section avatar>
                 <q-icon :color="contact.color" :name="contact.icon" />
