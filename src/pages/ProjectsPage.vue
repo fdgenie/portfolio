@@ -57,8 +57,8 @@
 </template>
 
 <script>
-import ExpansionItemProject from "@/components/ExpansionItemProject";
-import ProjectCard from "@/components/ProjectCard";
+import ExpansionItemProject from "@/components/ExpansionItemProject.vue";
+import ProjectCard from "@/components/ProjectCard.vue";
 
 export default {
   name: "ProjectsPage",

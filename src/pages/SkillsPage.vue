@@ -24,7 +24,8 @@
 </template>
 
 <script>
-import VChart from "vue-echarts-v3/src/full.js";
+import VChart from "vue-echarts-v3/src/lite.js";
+import 'echarts/lib/chart/bar';
 
 export default {
   name: "SkillsPage",
