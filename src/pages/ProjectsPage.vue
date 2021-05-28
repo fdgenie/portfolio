@@ -39,13 +39,13 @@
               </ExpansionItemProject>
 
               <ExpansionItemProject
-                icon="mdi-dice-d20"
-                label="Dndelicious"
-                :model.sync="expansionOpenDndelicious"
+                icon="mdi-controller-classic"
+                label="Showgamedex"
+                :model.sync="expansionOpenShowgamedex"
               >
                 <ProjectCard
-                  :gameDescription="dndDescription"
-                  refLink="https://dndelicious.netlify.app/#/"
+                  :gameDescription="showgamedexDescription"
+                  refLink="https://showgamedex.netlify.app/#/"
                 />
               </ExpansionItemProject>
             </q-list>
@@ -70,14 +70,12 @@ export default {
     return {
       expansionOpenGeekScore: false,
       expansionOpenHivemind: false,
-      expansionOpenDndelicious: false,
+      expansionOpenShowgamedex: false,
       geekScoreDescription: `A PWA for board games fans. It allows you to store your games,
                 create teams and collect statistics.`,
       hiveMindDescription: `Puzzle game in playStore and KaiOS.`,
-      dndDescription: `An application for the Dungeon&Dragons enthusiast. It have the
-                basic informations for Races, Classes, Spells, Monsters and
-                Equipments so you can check anything you need fast and easy in
-                your session.`
+      showgamedexDescription: `An application for gamers. It have
+                basic informations for over 500.000 games.`
     };
   }
 };
